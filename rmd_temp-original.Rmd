@@ -114,6 +114,7 @@ The above figure represents the MA-plot of the data for the comparisons done, wh
 ## citations
 
 ```{r echo=TRUE, eval=T}
+.libPaths("/home/rstudio/R/x86_64-pc-linux-gnu-library/4.0")
 citation("DESeq2")
 citation("SARTools")
 ```
