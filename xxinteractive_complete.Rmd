@@ -15,6 +15,7 @@ df_print: kable
 date: 'Compiled: `r format(Sys.Date(), "%B %d, %Y")`'
 ---
 
+
 <div>
 <a href="https://www.rnaseqcore.vet.cornell.edu/" target="_blank" class="trex-logo"> <img src="/Users/faraz/Documents/trex-extended-logo.png"
 style=
@@ -31,11 +32,12 @@ margin:0 auto 20px !important;"> </a>
 </div>
 
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
 ```
+
+
 
 ## R Markdown
 
@@ -49,6 +51,7 @@ The fastq files are available for download upon request.
 Users receiving files from RSCshare are advised to delete all files once they have secure copied them to their own respective drives.
 
 <font size="1"> a copy of your data will be securely archived on our end </font>
+
 
 ## sample tracking
 ```{r echo=F, eval = T, warning=F}

@@ -15,6 +15,7 @@ df_print: kable
 date: 'Compiled: `r format(Sys.Date(), "%B %d, %Y")`'
 ---
 
+
 <div>
 <a href="https://www.rnaseqcore.vet.cornell.edu/" target="_blank" class="trex-logo"> <img src="/Users/faraz/Documents/trex-extended-logo.png"
 style=
@@ -29,7 +30,6 @@ width:32%;
 height:auto;
 margin:0 auto 20px !important;"> </a>
 </div>
-
 
 
 ```{r setup, include=FALSE}
@@ -49,6 +49,7 @@ The fastq files are available for download upon request.
 Users receiving files from RSCshare are advised to delete all files once they have secure copied them to their own respective drives.
 
 <font size="1"> a copy of your data will be securely archived on our end </font>
+
 
 ## sample tracking
 ```{r echo=F, eval = T, warning=F}
@@ -81,12 +82,6 @@ The filtered reads were then aligned to `r params$genome ` reference genome with
 
 <font size="1"> * -\-paired only applicable for paired-end data; -\-length 10 for smRNA-seq libraries</font>
 
-## geneBodyCoverage
-![](./figures/heatMap.png){width=600px}
-![](./figures/curves.png){width=600px}
-
-A good library should indicate little to no bias across the entire gene body.
-
 
 
 ## countsDistribution
@@ -95,21 +90,58 @@ A good library should indicate little to no bias across the entire gene body.
 
 Post-normalization, the medians should be consistent across samples and more similar between biological replicates.
 
-## sampleCluster
+
+
+
+## geneBodyCoverage
+![](figures/heatMap.png){width=600px}
+![](figures/curves.png){width=600px}
+
+A good library should indicate little to no bias across the entire gene body.
+
+
+
+
+## sampleCluster {.tabset  .tabset-fade .tabset-pills}
+### Clust - All Samples
 ![](figures/cluster.png){width=800px}
 
 An euclidean distance is computed between samples, and the dendrogram is built upon the Ward criterion. We expect this dendrogram to group replicates and separate biological conditions.
 
-## principalComponents
+### Clust - Filtered
+![](figures/cluster-flt.png){width=800px}
+
+An euclidean distance is computed between samples, and the dendrogram is built upon the Ward criterion. We expect this dendrogram to group replicates and separate biological conditions.
+
+
+## principalComponents {.tabset  .tabset-fade .tabset-pills}
+### PCA - All Samples
 ![](figures/PCA.png){width=1200px}
 
 Another way of visualizing the experiment variability is to look at the first principal components of the PCA. On this figure, the first principal component (PC1) is expected to separate samples from the different biological conditions, meaning that the biological variability is the main source of variance in the data.
 
+### PCA - Filtered
+![](figures/PCA-flt.png){width=1200px}
 
-## MA-Plot
-![](figures/MAPlot.png){width=1200px}
+Another way of visualizing the experiment variability is to look at the first principal components of the PCA. On this figure, the first principal component (PC1) is expected to separate samples from the different biological conditions, meaning that the biological variability is the main source of variance in the data.
+
+
+## MA-Plots {.tabset  .tabset-fade .tabset-pills}
+### MA - All Samples
+![](figures/MAPlot.png){width=800px}
 
 The above figure represents the MA-plot of the data for the comparisons done, where differentially expressed features are highlighted in red. A MA-plot represents the log ratio of differential expression as a function of the mean intensity for each feature. Triangles correspond to features having a too low/high log2(FC) to be displayed on the plot.
+
+
+### MA - Filtered
+![](figures/MAPlot-flt.png){width=800px}
+
+The above figure represents the MA-plot of the data for the comparisons done, where differentially expressed features are highlighted in red. A MA-plot represents the log ratio of differential expression as a function of the mean intensity for each feature. Triangles correspond to features having a too low/high log2(FC) to be displayed on the plot.
+
+
+
+
+
 
 ## citations
 
