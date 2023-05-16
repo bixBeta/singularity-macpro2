@@ -4,7 +4,7 @@ arg <-  commandArgs(trailingOnly = T)
 
 if (length(arg)==0) {
   cat("\n")
-  print(" Usage = Rscript processMirDeep2.R < mirdeep2 csv output >")
+  print(" Usage = Rscript processMirDeep2-v2.R < mirdeep2 csv output >")
   cat("\n")
   stop("Please provide the mirdeep2 csv output file !!! \n", call.=FALSE)
   cat("\n")
